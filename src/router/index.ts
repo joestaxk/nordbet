@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 import Classics from '@/page/classic/classics.vue'
 import Home from '@/page/landing/Home.vue'
@@ -6,7 +6,7 @@ import Slots from '@/page/slot/Slots.vue'
 import Sports from '@/page/sports/sports.vue'
 
 const router = createRouter({
-  history: createMemoryHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',

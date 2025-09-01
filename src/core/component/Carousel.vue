@@ -35,7 +35,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules'
@@ -92,7 +92,7 @@ const dynamicSlidesPerView = computed(() => {
 })
 
 // Methods
-const onSwiper = (swiper: any) => {
+const onSwiper = (swiper) => {
     swiperInstance.value = swiper
 }
 
