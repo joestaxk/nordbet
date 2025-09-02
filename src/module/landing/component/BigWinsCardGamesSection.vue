@@ -64,7 +64,7 @@ defineProps<{ data: bigWinInterface }>()
         </div>
 
 
-        <div class="flex gap-4 mt-4 ">
+        <div class="flex gap-4 mt-4 xs:text-[14px] text-[12px]">
           <a href="" target="_blank" rel="noopener noreferrer" class="underline-link">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" size="15"
               top="0.5" class="css-11mqljs">

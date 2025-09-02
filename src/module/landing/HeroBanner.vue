@@ -59,7 +59,7 @@ import ExploreCardHeroBanner from './component/ExploreCardHeroBanner.vue';
           <img src="/images/landing/signup-bonus.webp" width="54" height="54" alt="signup-bonus">
         </div>
         <div class="">
-          <h4 class="text-lemon font-[600] text-[17px]">Welcome Bonus</h4>
+          <h4 class="text-lemon font-[600] md:text-[17px] text-[14px]">Welcome Bonus</h4>
           <p class="font-[500]">Bonus based on on-chain activity. Claim Up to </p>
         </div>
       </div>

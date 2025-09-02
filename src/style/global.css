@@ -33,3 +33,15 @@ body {
   /* font-family: "Vend Sans", sans-serif; */
   font-family: "Noto Sans", sans-serif;
 }
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
