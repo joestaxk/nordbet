@@ -12,7 +12,7 @@ import ExploreCardHeroBanner from './component/ExploreCardHeroBanner.vue';
     class="min-h-[400px] p-3 rounded-[16px] space-y-4">
     <div class="">
       <ExploreCardHeroBanner />
-      <div class="my-3 flex flex-wrap gap-4 text-[13px]">
+      <div class="my-3 flex flex-wrap gap-4 xs:text-[13px] text-[11.5px]">
         <a href="" class="underline-link">
           <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg" size="14"
             class="css-ckrezq">
