@@ -31,22 +31,22 @@ defineProps<{ data: bigWinInterface }>()
           </div>
           <div class="font-[700] text-[12px]">RTP {{ data?.rtp }}</div>
         </div>
-        <div class="">
-          <div class="flex items-center text-[14px] text-skinTextMuted justify-between">
+        <div class="xs:text-[14px] text-[12px]">
+          <div class="flex items-center text-skinTextMuted justify-between">
             Payout:
             <span class="font-[600] text-success">
               {{ data?.gameProps?.payout }}
             </span>
           </div>
 
-          <div class="flex items-center text-[14px] text-skinTextMuted justify-between">
+          <div class="flex items-center text-skinTextMuted justify-between">
             Multiplier:
             <span class="font-[600] text-success">
               {{ data?.gameProps?.multiplier }}
             </span>
           </div>
 
-          <div class="flex items-center text-[14px] text-skinTextMuted justify-between">
+          <div class="flex items-center text-skinTextMuted justify-between">
             Bet:
             <span class="font-[600] text-white">
 
@@ -54,7 +54,7 @@ defineProps<{ data: bigWinInterface }>()
             </span>
           </div>
 
-          <div class="flex items-center text-[14px] text-skinTextMuted justify-between">
+          <div class="flex items-center text-skinTextMuted justify-between">
             Player:
             <span style="display: flex; align-items: center; cursor: pointer;" class="font-[600] text-white">
               <img src="/images/landing/crown.webp" alt="Diamond 2" size="16" class="w-5" style="margin-right: 12px;" />
