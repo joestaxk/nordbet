@@ -1,9 +1,9 @@
 <!-- eslint-disable vue/no-use-v-if-with-v-for -->
 <template>
-  <div class="w-[195px]  h-[240px] rounded-[8px] overflow-hidden hover:scale-[1.01] duration-100 ease-in group"
-    :style="{ background: `url(${imgUrl})` }"
-    style="background-position: 50% 50%; background-repeat: no-repeat; background-size: 101%">
+  <div
+    class="relative xs:w-[198px] !w-[150px] xs:h-[240px] h-[200px] rounded-[16px] overflow-hidden hover:scale-[1.01] duration-100 ease-in group">
     <RouterLink :to="link">
+      <img :src="imgUrl" alt="" class="w-full h-full absolute object-bottom object-cover border-none">
       <div class="w-full h-full relative p-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-[0_2px]">
@@ -44,8 +44,8 @@
         <div
           class="absolute bg-gradient-to-t from-[#141414] to-transparent inset-0 flex items-end justify-center h-full group-hover:opacity-100 opacity-0 duration-200">
           <div class="flex flex-col items-center gap-1  translate-y-[-1.4rem]">
-            <Button class="w-[150px]">Play</Button>
-            <div class="font-bold text-[14px]">Max. Payout: <span class="text-success">
+            <Button class="xs:w-[150px] w-[100px]">Play</Button>
+            <div class="font-bold xs:text-[14px] text-[12px]">Max. Payout: <span class="text-success">
                 {{ payout }}
               </span>
             </div>
