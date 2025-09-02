@@ -19,7 +19,7 @@ defineProps<GameCardProps>();
 </script>
 
 <template>
-  <div class="text-white space-y-2 xs:w-[400px] p-[12px_8px_8px] bg-[#313536] max-h-full rounded-[8px]">
+  <div class="text-white space-y-2 w-[400px] p-[12px_8px_8px] bg-skinLight max-h-full rounded-[8px]">
     <!-- League header (unchanged) -->
     <div class="flex-1 text-skinTextMuted flex relative text-left">
       <div class="flex gap-1 font-bold text-[12px]">
