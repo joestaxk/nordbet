@@ -17,7 +17,6 @@
     <DynamicGrid :datas="filteredGames" :column="2" :cardWidth="198">
       <template #card="{ data }">
         <SingleGameCard v-bind="data" class="" />
-        hello
       </template>
     </DynamicGrid>
   </div>
