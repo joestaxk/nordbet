@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-use-v-if-with-v-for -->
 <template>
   <div
-    class="relative xs:w-[198px] !w-[150px] xs:h-[240px] h-[200px] rounded-[16px] overflow-hidden hover:scale-[1.01] duration-100 ease-in group">
+    class="relative xs:w-[198px] !w-[170px] xs:h-[240px] h-[200px] rounded-[16px] overflow-hidden hover:scale-[1.01] duration-100 ease-in group">
     <RouterLink :to="link">
       <img :src="imgUrl" alt="" class="w-full h-full absolute object-bottom object-cover border-none">
       <div class="w-full h-full relative p-2">
