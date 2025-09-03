@@ -2,7 +2,7 @@
   <div
     class="relative xs:w-[198px] !w-[170px] xs:h-[240px] h-[200px] rounded-[16px] overflow-hidden hover:scale-[1.01] duration-100 ease-in group">
     <RouterLink :to="link">
-      <img :src="imgUrl" class="w-full h-full absolute object-bottom object-cover border-none">
+      <img :src="imgUrl" class="w-full h-full absolute object-bottom object-cover border-none" />
       <div class="w-full h-full relative p-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-[0_2px]">
@@ -21,7 +21,7 @@
           <!-- verify -->
           <div class="flex gap-2 items-center">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" size="13"
-              color="#2aee88" top="-1" style="margin-left: auto;" class="css-g26q68">
+              color="#2aee88" top="-1" style="margin-left: auto" class="css-g26q68">
               <path
                 d="M8.00013 0C7.42412 0 6.95679 0.467203 6.95679 1.0434V2.7826H9.04347V1.0434C9.04347 0.467203 8.57639 0 8.00013 0Z"
                 fill="currentColor"></path>
@@ -36,17 +36,19 @@
                 fill="currentColor"></path>
             </svg>
 
-            <button v-if="newLabel"
-              class="text-[10px] bg-success rounded-[4px] w-fit text-black px-1 font-bold">NEW</button>
+            <button v-if="isNew" class="text-[10px] bg-success rounded-[4px] w-fit text-black px-1 font-bold">
+              NEW
+            </button>
           </div>
         </div>
 
-
         <div
           class="absolute bg-gradient-to-t from-[#141414] to-transparent inset-0 flex items-end justify-center h-full group-hover:opacity-100 opacity-0 duration-200">
-          <div class="flex flex-col items-center gap-1  translate-y-[-1.4rem]">
+          <div class="flex flex-col items-center gap-1 translate-y-[-1.4rem]">
             <Button class="xs:w-[150px] w-[100px]">Play</Button>
-            <div class="font-bold xs:text-[14px] text-[12px]">Max. Payout: <span class="text-success">
+            <div class="font-bold xs:text-[14px] text-[12px]">
+              Max. Payout:
+              <span class="text-success">
                 {{ payout }}
               </span>
             </div>
@@ -58,10 +60,10 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 
-import type { singleCardInterface } from '../types/singleCardInterface';
-import Button from './Button.vue';
+import type { singleCardInterface } from '../types/singleCardInterface'
+import Button from './Button.vue'
 
-defineProps<singleCardInterface>();
+defineProps<singleCardInterface>()
 </script>

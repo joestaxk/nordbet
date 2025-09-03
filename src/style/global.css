@@ -1,5 +1,4 @@
-@import "tailwindcss";
-
+@import 'tailwindcss';
 
 @theme inline {
   --color-skin: #221f42;
@@ -22,7 +21,7 @@
   cursor: pointer;
   column-gap: 4px;
   font-size: 14px;
-  font-family: "neue_plak", sans-serif;
+  font-family: 'neue_plak', sans-serif;
   font-weight: 500;
   font-style: normal;
   color: linear-gradient(95deg, #17191a 50%, transparent 100%, #242829 20%);
@@ -31,7 +30,7 @@
 body {
   /* font-family: 'Poppins', sans-serif; */
   /* font-family: "Vend Sans", sans-serif; */
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .hide-scroll {

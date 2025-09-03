@@ -1,6 +1,7 @@
 <template>
   <button
-    class="h-[35px] w-full text-white border  border-[#3a4142] hover:bg-[#1e1b38] cursor-pointer flex p-[0px_8px] overflow-hidden relative bg-skin font-[600] leading-[30px] justify-between rounded-[8px] transition-colors">
+    class="h-[35px] w-full text-white border border-[#3a4142] hover:bg-[#1e1b38] cursor-pointer flex p-[0px_8px] overflow-hidden relative bg-skin font-[600] leading-[30px] justify-between rounded-[8px] transition-colors"
+  >
     <div class="flex-[.2_1_0%] text-white/50 text-[12px] transition-colors ease-in-out pr-[4px]">
       <div class="overflow-hidden">{{ market }}</div>
     </div>

@@ -4,5 +4,5 @@ export type singleCardInterface = {
   rtp: string
   payout: string
   link: string
-  newLabel: boolean
+  isNew: boolean
 }
