@@ -7,13 +7,15 @@
       <div class="w-full h-full relative p-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-[0_2px]">
-            <svg v-if="rating" v-for="i in 5" :key="i" width="8" height="10" viewBox="0 0 14 16" fill="none"
-              xmlns="http://www.w3.org/2000/svg" size="11"
-              :style="{ color: `${i <= rating ? '#2aee88' : 'rgba(255,255,255,0.4)'}` }">
-              <path
-                d="M8.09574 6.85519L8.09574 0.555211C8.09574 0.0457089 7.47299 -0.193718 7.13826 0.187089L0.139331 8.14936C-0.174773 8.5067 0.0760766 9.07158 0.548866 9.07158H5.53868L5.84005 15.4713C5.86341 15.9674 6.47062 16.1843 6.7969 15.8131L13.8604 7.77741C14.1745 7.42007 13.9236 6.85519 13.4508 6.85519H8.09574Z"
-                fill="currentColor"></path>
-            </svg>
+            <template v-if="rating">
+              <svg v-for="i in 5" :key="i" width="8" height="10" viewBox="0 0 14 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg" size="11"
+                :style="{ color: `${i <= rating ? '#2aee88' : 'rgba(255,255,255,0.4)'}` }">
+                <path
+                  d="M8.09574 6.85519L8.09574 0.555211C8.09574 0.0457089 7.47299 -0.193718 7.13826 0.187089L0.139331 8.14936C-0.174773 8.5067 0.0760766 9.07158 0.548866 9.07158H5.53868L5.84005 15.4713C5.86341 15.9674 6.47062 16.1843 6.7969 15.8131L13.8604 7.77741C14.1745 7.42007 13.9236 6.85519 13.4508 6.85519H8.09574Z"
+                  fill="currentColor"></path>
+              </svg>
+            </template>
             <div class="font-[700] text-[8px]">RTP {{ rtp }}</div>
           </div>
 
