@@ -1,9 +1,8 @@
-<!-- eslint-disable vue/no-use-v-if-with-v-for -->
 <template>
   <div
     class="relative xs:w-[198px] !w-[170px] xs:h-[240px] h-[200px] rounded-[16px] overflow-hidden hover:scale-[1.01] duration-100 ease-in group">
     <RouterLink :to="link">
-      <img :src="imgUrl" alt="" class="w-full h-full absolute object-bottom object-cover border-none">
+      <img :src="imgUrl" class="w-full h-full absolute object-bottom object-cover border-none">
       <div class="w-full h-full relative p-2">
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-[0_2px]">
@@ -64,5 +63,6 @@ import { RouterLink } from 'vue-router';
 import type { singleCardInterface } from '../types/singleCardInterface';
 import Button from './Button.vue';
 
-defineProps<singleCardInterface>()
+const props = defineProps<singleCardInterface>();
+console.log(props)
 </script>
