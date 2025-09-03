@@ -9,7 +9,7 @@
             clip-rule="evenodd" />
         </svg>
       </div>
-      <input v-model="searchQuery" type="text" placeholder="Search by name"
+      <input type="text" placeholder="Search by name"
         class="block w-full pl-10 pr-3 py-3 border border-gray-400 rounded-full bg-skin shadow-sm focus:outline-none focus:ring-2 focus:ring-lemon focus:border-lemon" />
     </div>
 
