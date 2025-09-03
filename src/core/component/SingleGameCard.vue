@@ -63,6 +63,5 @@ import { RouterLink } from 'vue-router';
 import type { singleCardInterface } from '../types/singleCardInterface';
 import Button from './Button.vue';
 
-const props = defineProps<singleCardInterface>();
-console.log(props)
+defineProps<singleCardInterface>();
 </script>
