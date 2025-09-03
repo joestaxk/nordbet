@@ -10,6 +10,8 @@ const props = defineProps<{
   column: number
 }>()
 
+console.log(props.datas)
+
 const containerRef = ref<HTMLElement | null>(null)
 const columnCount = ref(0)
 const childWidth = props.cardWidth  // Fixed width of each card
