@@ -9,55 +9,55 @@
             clip-rule="evenodd" />
         </svg>
       </div>
-      <input type="text" placeholder="Search by name"
+      <input v-model="searchQuery" type="text" placeholder="Search by name"
         class="block w-full pl-10 pr-3 py-3 border border-gray-400 rounded-full bg-skin shadow-sm focus:outline-none focus:ring-2 focus:ring-lemon focus:border-lemon" />
     </div>
 
     <!-- Corrected Game Grid -->
-    <!-- <DynamicGrid :datas="filteredGames" :cardWidth="198">
+    <DynamicGrid :datas="filteredGames" :cardWidth="198">
       <template #card="{ data }">
         <SingleGameCard v-bind="data" class="" />
       </template>
-</DynamicGrid> -->
+    </DynamicGrid>
   </div>
 </template>
 
 <script setup lang="ts">
-// import { ref, computed } from 'vue';
+import { ref, computed } from 'vue';
 
-// import DynamicGrid from '@/core/component/DynamicGrid.vue';
-// import SingleGameCard from '@/core/component/SingleGameCard.vue';
+import DynamicGrid from '@/core/component/DynamicGrid.vue';
+import SingleGameCard from '@/core/component/SingleGameCard.vue';
 
-// // Sample game data
-// const games = ref([
-//   { id: 1, payout: "$10,000", name: 'Sugar Blitz', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.3, isNew: true },
-//   { id: 2, payout: "$10,000", name: 'Castle Clash', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.2, isNew: false },
-//   { id: 3, payout: "$10,000", name: 'Wonka\'s Factory', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.5, isNew: true },
-//   { id: 4, payout: "$10,000", name: 'Turbo Rush', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.8, isNew: false },
-//   { id: 5, payout: "$10,000", name: 'Fruit Fiesta', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.1, isNew: false },
-//   { id: 6, payout: "$10,000", name: 'Shadow Blade', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.7, isNew: true },
-//   { id: 7, payout: "$10,000", name: 'Mystic Gemstorm', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.0, isNew: false },
-//   { id: 8, payout: "$10,000", name: 'Buffalo Fury', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.9, isNew: false },
-//   { id: 9, payout: "$10,000", name: 'Candy Planet', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.4, isNew: false },
-//   { id: 10, payout: "$10,000", name: 'Gates of Zeus', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.8, isNew: true },
-//   { id: 11, payout: "$10,000", name: 'Sugar Blitz', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.3, isNew: true },
-//   { id: 12, payout: "$10,000", name: 'Castle Clash', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.2, isNew: false },
-//   { id: 13, payout: "$10,000", name: 'Wonka\'s Factory', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.5, isNew: true },
-//   { id: 14, payout: "$10,000", name: 'Turbo Rush', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.8, isNew: false },
-//   { id: 15, payout: "$10,000", name: 'Fruit Fiesta', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.1, isNew: false },
-//   { id: 16, payout: "$10,000", name: 'Shadow Blade', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.7, isNew: true },
-//   { id: 17, payout: "$10,000", name: 'Mystic Gemstorm', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.0, isNew: false },
-//   { id: 18, payout: "$10,000", name: 'Buffalo Fury', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.9, isNew: false },
-//   { id: 19, payout: "$10,000", name: 'Candy Planet', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.4, isNew: false },
-//   { id: 20, payout: "$10,000", name: 'Gates of Zeus', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.8, isNew: true },
-// ]);
+// Sample game data
+const games = ref([
+  { id: 1, payout: "$10,000", name: 'Sugar Blitz', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.3, isNew: true },
+  { id: 2, payout: "$10,000", name: 'Castle Clash', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.2, isNew: false },
+  { id: 3, payout: "$10,000", name: 'Wonka\'s Factory', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.5, isNew: true },
+  { id: 4, payout: "$10,000", name: 'Turbo Rush', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.8, isNew: false },
+  { id: 5, payout: "$10,000", name: 'Fruit Fiesta', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.1, isNew: false },
+  { id: 6, payout: "$10,000", name: 'Shadow Blade', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.7, isNew: true },
+  { id: 7, payout: "$10,000", name: 'Mystic Gemstorm', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.0, isNew: false },
+  { id: 8, payout: "$10,000", name: 'Buffalo Fury', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.9, isNew: false },
+  { id: 9, payout: "$10,000", name: 'Candy Planet', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.4, isNew: false },
+  { id: 10, payout: "$10,000", name: 'Gates of Zeus', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.8, isNew: true },
+  { id: 11, payout: "$10,000", name: 'Sugar Blitz', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.3, isNew: true },
+  { id: 12, payout: "$10,000", name: 'Castle Clash', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.2, isNew: false },
+  { id: 13, payout: "$10,000", name: 'Wonka\'s Factory', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.5, isNew: true },
+  { id: 14, payout: "$10,000", name: 'Turbo Rush', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.8, isNew: false },
+  { id: 15, payout: "$10,000", name: 'Fruit Fiesta', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.1, isNew: false },
+  { id: 16, payout: "$10,000", name: 'Shadow Blade', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.7, isNew: true },
+  { id: 17, payout: "$10,000", name: 'Mystic Gemstorm', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.0, isNew: false },
+  { id: 18, payout: "$10,000", name: 'Buffalo Fury', imgUrl: '/images/landing/plinko.jpg', rating: 3, rtp: 95.9, isNew: false },
+  { id: 19, payout: "$10,000", name: 'Candy Planet', imgUrl: '/images/landing/plinko.jpg', rating: 4, rtp: 96.4, isNew: false },
+  { id: 20, payout: "$10,000", name: 'Gates of Zeus', imgUrl: '/images/landing/plinko.jpg', rating: 5, rtp: 96.8, isNew: true },
+]);
 
-// const searchQuery = ref('');
+const searchQuery = ref('');
 
-// // Computed property for filtered games
-// const filteredGames = computed(() => {
-//   return games.value.filter(game =>
-//     game.name.toLowerCase().includes(searchQuery.value.toLowerCase())
-//   );
-// });
+// Computed property for filtered games
+const filteredGames = computed(() => {
+  return games.value.filter(game =>
+    game.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+  );
+});
 </script>
