@@ -2,8 +2,10 @@
 import { debounce } from 'lodash-es'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+import type { singleCardInterface } from '../types/singleCardInterface';
+
 const props = defineProps<{
-  datas: []
+  datas: singleCardInterface[]
   cardWidth: number,
   column: number
 }>()

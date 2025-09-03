@@ -25,6 +25,10 @@ const router = createRouter({
       component: Sports,
     },
   ],
+  scrollBehavior() {
+    // Always scroll to top
+    return { top: 0 }
+  },
 })
 
 export default router

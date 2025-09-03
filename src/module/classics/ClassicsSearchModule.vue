@@ -14,15 +14,15 @@
     </div>
 
     <!-- Corrected Game Grid -->
-    <DynamicGrid :datas="filteredGames" :cardWidth="198">
+    <!-- <DynamicGrid :datas="filteredGames" :cardWidth="198">
       <template #card="{ data }">
         <SingleGameCard v-bind="data" class="" />
       </template>
-    </DynamicGrid>
+</DynamicGrid> -->
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue';
 
 import DynamicGrid from '@/core/component/DynamicGrid.vue';
