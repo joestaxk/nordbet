@@ -1,8 +1,9 @@
 export type singleCardInterface = {
+  id?: number
+  name?: string
   imgUrl: string
-  link: string
   rating: number
-  rtp: string
+  rtp: number
   payout: string
   link: string
   isNew: boolean

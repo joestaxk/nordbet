@@ -15,7 +15,7 @@
                   fill="currentColor"></path>
               </svg>
             </template>
-            <div class="font-[700] text-[8px]">RTP {{ rtp }}</div>
+            <div class="font-[700] text-[8px]">RTP {{ rtp }}%</div>
           </div>
 
           <!-- verify -->

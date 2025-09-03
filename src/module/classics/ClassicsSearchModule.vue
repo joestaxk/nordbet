@@ -4,23 +4,17 @@
     <div class="relative mb-8 max-w-full mx-auto">
       <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-          <path
-            fill-rule="evenodd"
+          <path fill-rule="evenodd"
             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-            clip-rule="evenodd"
-          />
+            clip-rule="evenodd" />
         </svg>
       </div>
-      <input
-        v-model="searchQuery"
-        type="text"
-        placeholder="Search by name"
-        class="block w-full pl-10 pr-3 py-3 border border-gray-400 rounded-full bg-skin shadow-sm focus:outline-none focus:ring-2 focus:ring-lemon focus:border-lemon"
-      />
+      <input v-model="searchQuery" type="text" placeholder="Search by name"
+        class="block w-full pl-10 pr-3 py-3 border border-gray-400 rounded-full bg-skin shadow-sm focus:outline-none focus:ring-2 focus:ring-lemon focus:border-lemon" />
     </div>
 
     <!-- Corrected Game Grid -->
-    <DynamicGrid :datas="filteredGames" :cardWidth="198">
+    <DynamicGrid :datas="filteredGames" :column="2" :cardWidth="198">
       <template #card="{ data }">
         <SingleGameCard v-bind="data" class="" />
         hello
@@ -29,7 +23,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
 
 import DynamicGrid from '@/core/component/DynamicGrid.vue'
@@ -45,6 +39,7 @@ const games = ref([
     rating: 4,
     rtp: 96.3,
     isNew: true,
+    link: "/"
   },
   {
     id: 2,
@@ -54,6 +49,7 @@ const games = ref([
     rating: 4,
     rtp: 96.2,
     isNew: false,
+    link: "/"
   },
   {
     id: 3,
@@ -63,6 +59,7 @@ const games = ref([
     rating: 5,
     rtp: 96.5,
     isNew: true,
+    link: "/"
   },
   {
     id: 4,
@@ -72,6 +69,7 @@ const games = ref([
     rating: 3,
     rtp: 95.8,
     isNew: false,
+    link: "/"
   },
   {
     id: 5,
@@ -81,6 +79,7 @@ const games = ref([
     rating: 4,
     rtp: 96.1,
     isNew: false,
+    link: "/"
   },
   {
     id: 6,
@@ -90,6 +89,7 @@ const games = ref([
     rating: 5,
     rtp: 96.7,
     isNew: true,
+    link: "/"
   },
   {
     id: 7,
@@ -99,6 +99,7 @@ const games = ref([
     rating: 4,
     rtp: 96.0,
     isNew: false,
+    link: "/"
   },
   {
     id: 8,
@@ -108,6 +109,7 @@ const games = ref([
     rating: 3,
     rtp: 95.9,
     isNew: false,
+    link: "/"
   },
   {
     id: 9,
@@ -117,6 +119,7 @@ const games = ref([
     rating: 4,
     rtp: 96.4,
     isNew: false,
+    link: "/"
   },
   {
     id: 10,
@@ -126,6 +129,7 @@ const games = ref([
     rating: 5,
     rtp: 96.8,
     isNew: true,
+    link: "/"
   },
   {
     id: 11,
@@ -135,6 +139,7 @@ const games = ref([
     rating: 4,
     rtp: 96.3,
     isNew: true,
+    link: "/"
   },
   {
     id: 12,
@@ -144,6 +149,7 @@ const games = ref([
     rating: 4,
     rtp: 96.2,
     isNew: false,
+    link: "/"
   },
   {
     id: 13,
@@ -153,6 +159,7 @@ const games = ref([
     rating: 5,
     rtp: 96.5,
     isNew: true,
+    link: "/"
   },
   {
     id: 14,
@@ -162,6 +169,7 @@ const games = ref([
     rating: 3,
     rtp: 95.8,
     isNew: false,
+    link: "/"
   },
   {
     id: 15,
@@ -171,6 +179,7 @@ const games = ref([
     rating: 4,
     rtp: 96.1,
     isNew: false,
+    link: "/"
   },
   {
     id: 16,
@@ -180,6 +189,7 @@ const games = ref([
     rating: 5,
     rtp: 96.7,
     isNew: true,
+    link: "/"
   },
   {
     id: 17,
@@ -189,6 +199,7 @@ const games = ref([
     rating: 4,
     rtp: 96.0,
     isNew: false,
+    link: "/"
   },
   {
     id: 18,
@@ -198,6 +209,7 @@ const games = ref([
     rating: 3,
     rtp: 95.9,
     isNew: false,
+    link: "/"
   },
   {
     id: 19,
@@ -207,6 +219,7 @@ const games = ref([
     rating: 4,
     rtp: 96.4,
     isNew: false,
+    link: "/"
   },
   {
     id: 20,
@@ -216,6 +229,7 @@ const games = ref([
     rating: 5,
     rtp: 96.8,
     isNew: true,
+    link: "/"
   },
 ])
 

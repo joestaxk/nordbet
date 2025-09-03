@@ -10,8 +10,6 @@ const props = defineProps<{
   column: number
 }>()
 
-console.log(props.datas)
-
 const containerRef = ref<HTMLElement | null>(null)
 const columnCount = ref(0)
 const childWidth = props.cardWidth // Fixed width of each card
@@ -45,13 +43,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div
-    ref="containerRef"
-    class="w-full overflow-hidden grid gap-2"
-    :style="{
-      'grid-template-columns': `repeat(${columnCount}, 1fr)`,
-    }"
-  >
+  <div ref="containerRef" class="w-full overflow-hidden grid gap-2" :style="{
+    'grid-template-columns': `repeat(${columnCount}, 1fr)`,
+  }">
     <slot v-for="(data, index) in datas" :key="index" name="card" :data="data" />
   </div>
 </template>
