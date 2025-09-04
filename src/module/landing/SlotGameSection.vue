@@ -14,22 +14,143 @@ const data: singleCardInterface[] = [
     isNew: true,
     payout: '$10,0000',
   },
+  {
+    imgUrl: '/images/landing/SugarBlitz.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/ShadowBlade.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/FruitFiesta.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+
+  {
+    imgUrl: '/images/landing/BuffaloFury.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/CandyPlanet.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/ShadowBlade.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/FruitFiesta.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/WonkasFactoryTotalFudgeUp.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/SugarBlitz.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/ShadowBlade.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/FruitFiesta.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+
+  {
+    imgUrl: '/images/landing/BuffaloFury.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/CandyPlanet.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/ShadowBlade.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/FruitFiesta.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+
 ]
 
 const handleSlideChange = () => {
   // console.log('Current slide:', index)
 }
-
-const multiplyData = Array.from({ length: 20 }).map(() => data)
 const sortedData: unknown[] = []
-const remainder = multiplyData.length % 2
-for (let i = 0; i < Math.floor(multiplyData.length / 2); ++i) {
-  const x = [multiplyData[i], multiplyData[i + 1]]
+const remainder = data.length % 2
+for (let i = 0; i < Math.floor(data.length / 2); ++i) {
+  const x = [data[i], data[i + 1]]
   sortedData.push(x)
 }
 
 if (remainder) {
-  sortedData.push(multiplyData[multiplyData.length - 1])
+  sortedData.push(data[data.length - 1])
 }
 </script>
 
@@ -62,8 +183,8 @@ if (remainder) {
     </template>
     <template #slide="{ slide }">
       <div class="grid grid-rows-2 gap-y-2">
-        <SingleGameCard v-bind="slide[0][0]" class="min-w-[198px] w-full" />
-        <SingleGameCard v-bind="slide[0][0]" class="min-w-[198px] w-full" />
+        <SingleGameCard v-bind="slide[0]" class="min-w-[198px] w-full" />
+        <SingleGameCard v-bind="slide[1]" class="min-w-[198px] w-full" />
       </div>
     </template>
   </Carousel>

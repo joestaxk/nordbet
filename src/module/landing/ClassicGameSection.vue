@@ -14,17 +14,71 @@ const data: singleCardInterface[] = [
     isNew: true,
     payout: '$10,0000',
   },
+  {
+    imgUrl: '/images/landing/CandyPlanet.jpg',
+    rating: 5,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/MysticGemstorm.jpg',
+    rating: 4,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/SugarBlitz.jpg',
+    rating: 3,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/plinko.jpg',
+    rating: 2,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/CandyPlanet.jpg',
+    rating: 5,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/MysticGemstorm.jpg',
+    rating: 4,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
+  {
+    imgUrl: '/images/landing/SugarBlitz.jpg',
+    rating: 3,
+    rtp: 96.2,
+    link: '/',
+    isNew: true,
+    payout: '$10,0000',
+  },
 ]
-
 const handleSlideChange = (index: number) => {
   console.log('Current slide:', index)
 }
 
-const multiplyData = Array.from({ length: 20 }).map(() => data[0])
 </script>
 
 <template>
-  <Carousel :slides="multiplyData" :id="1223" height="auto" :min-slide-width="198" :space-between="0"
+  <Carousel :slides="data" :id="1223" height="auto" :min-slide-width="198" :space-between="0"
     @slide-change="handleSlideChange">
     <template #header>
       <div class="flex items-center gap-2">
